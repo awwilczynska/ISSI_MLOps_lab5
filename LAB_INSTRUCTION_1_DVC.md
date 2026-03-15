@@ -229,13 +229,27 @@ we can always go back to the previous version. This showcases the usefulness of 
 
 1. Run the script, replacing the raw data with the cleaned file with `ames_data_cleaning.py`.
 
+```commandline
+uv run python ames_data_cleaning.py --file-path data/ames_data_2006_2008.parquet 
+```
+
 2. Inspect the resulting file with `ames_inspect_data.py` script, to ensure that it really
    changed as expected.
 
+```commandline
+uv run python ames_inspect_data.py --file-path data/ames_data_2006_2008.parquet 
+```
+
 3. Add it to DVC to update the tracked data. DVC will detect the file has changed and update
    its metadata.
+4. 
+dvc status
+dvc add data/ames_data_2006_2008.parquet
 
 4. Add the resulting `.dvc` file to Git.
+5. 
+git status
+git add data/ames_data_2006_2008.parquet.dvc
 
 5. Push files to DVC and Git repositories.
 

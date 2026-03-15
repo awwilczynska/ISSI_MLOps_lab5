@@ -78,6 +78,10 @@ Inspect the file by using the `ames_inspect_data.py` script. It is implemented w
 [click framework](https://click.palletsprojects.com/en/stable/), which is quite powerful
 and easy to use for implementing CLI applications.
 
+```commandline
+uv run python ames_inspect_data.py --file-path data/ames_data_2006_2008.parquet 
+```
+
 Now, let's start tracking that file by adding it to DVC:
 ```commandline
 dvc add data/ames_data_2006_2008.parquet
